@@ -31,7 +31,7 @@ int main(int argc, const char * argv[]) {
     
     int iter = 0;
     
-    last_val = sc;
+    last_val = 0.00f;
     last_val2 = 0.00f;
     
     while (true) {
