@@ -5,6 +5,7 @@
 //
 
 #include <iostream>
+#include <iomanip>
 
 #include <math.h>
 
@@ -14,14 +15,16 @@
 
 #define precision(x) res * pow(10,x)
 
+#define prec 6
+
 //
 //  Function
 //
 
-#define f(x) x - 2 * log(x) - 40
+#define f(x) cos(x) + exp(2 - x)
 
-double low = 45.0f;
-double high = 55.0f;
+double low = 3.0f;
+double high = 2.0f;
 
 int main(int argc, const char * argv[]) {
     unsigned int iter = 0;
@@ -32,8 +35,8 @@ int main(int argc, const char * argv[]) {
             
             double res = f(x);
             
-            if (!floor(precision(5))) {
-                std::cout << "The value of X is " << x << "." << std::endl;
+            if (!floor(precision(prec))) {
+                std::cout << "The value of X is " << std::setprecision(prec + 2) << x << "." << std::endl;
                 
                 break;
             }
