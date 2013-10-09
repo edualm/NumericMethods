@@ -8,7 +8,15 @@
 
 #include <math.h>
 
+//
+//  Precision Macro (Do Not Change!)
+//
+
 #define precision(x) res * pow(10,x)
+
+//
+//  Function
+//
 
 #define f(x) x - 2 * log(x) - 40
 
